@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ubicación - JEMZASPA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+
+    h2 {
+      padding: 20px 10px;
+      color: #333;
+      font-size: 2rem;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .mapa-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    a.volver {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: 0.3s;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 1s;
+    }
+
+    a.volver:hover {
+      background-color: #0056b3;
+    }
+
+    /* Animación */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.4rem;
+        padding: 16px 12px;
+      }
+
+      iframe {
+        height: 300px;
+      }
+
+      a.volver {
+        width: 90%;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📍 Aquí estamos ubicados 📍</h2>
+
+  <div class="mapa-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.454232624341!2d-70.19899892473237!3d-22.09127637729964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96a1d1f431da49b1%3A0x8e86e9e4e66de7a2!2sBol%C3%ADvar%201454%2C%20Tocopilla%2C%20Antofagasta!5e0!3m2!1ses-419!2scl!4v1713132950107!5m2!1ses-419!2scl" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <a href="index.html" class="volver">🔙 Volver a la página principal</a>
+
+</body>
+</html>
